@@ -1,0 +1,95 @@
+/* font-family: 'Shadows Into Light', cursive;
+font-family: 'Open Sans', sans-serif; */
+/*  https://coolors.co/225560-7149ff-30343f-f7f7f2-ddd92a  */
+
+:root {
+    --gunmetal: #30343F;
+    --pear: #DDD92A;
+    --white-smoke: #F7F7F2;
+    --dark-green: #225560;
+    --fluor-purple: #7149FF;
+    --charcoal: #001628;
+    --fluor-green: #72e0d1;
+    --title-border-size: 2px;
+};
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--charcoal);
+    font-family: 'Open Sans', sans-serif; 
+    margin: 4px;
+}
+ 
+.title-bar {
+    width: calc(100% -  (var(--title-border-size) * 2));
+    height: calc(40px - (var(--title-border-size) * 2));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-smoke);
+    background-color:  var(--charcoal);
+    border: var(--title-border-size) solid var(--fluor-green); 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .92rem;
+} 
+
+.skills {    
+    width: 50%;
+    margin:4rem 0 0 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 80px 80px 80px;
+    grid-template-rows: 1fr 1fr 20px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    color: white;   
+}
+
+
+.skills-grid__header { grid-area: 1 / 1 / 3 / 4; }
+.skills-grid__footer { grid-area: 3 / 1 / 4 / 7; }
+.skills-grid__skill-1 { grid-area: 1 / 4 / 2 / 5; }
+.skills-grid__skill-2 { grid-area: 2 / 4 / 3 / 5; }
+.skills-grid__skill-3 { grid-area: 1 / 5 / 2 / 6; }
+.skills-grid__skill-4 { grid-area: 2 / 5 / 3 / 6; }
+.skills-grid__skill-5 { grid-area: 1 / 6 / 2 / 7; }
+.skills-grid__skill-6 { grid-area: 2 / 6 / 3 / 7; }
+
+
+.skills__header {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 6rem;
+    text-transform: uppercase;
+    padding: 20px;
+    align-self: center;
+    justify-self: center;
+}
+
+.skills__icon {
+    font-size: 1.8rem;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    cursor: pointer;
+    transition: color .24s;
+}
+
+.skills__icon:hover {
+    color: var(--pear);
+}
+.skills__name {
+    font-size: .8rem;
+    display: block;
+}
+
+.skills__footer {
+    background-color: var(--white-smoke);
+}
