@@ -5,10 +5,12 @@ font-family: 'Open Sans', sans-serif; */
 :root {
     --gunmetal: #30343F;
     --pear: #DDD92A;
+    --light-pear: #ebe984;
     --white-smoke: #F7F7F2;
     --dark-green: #225560;
     --fluor-purple: #7149FF;
     --charcoal: #001628;
+    --dark-charcoal: #030e17;
     --fluor-green: #72e0d1;
     --title-border-size: 2px;
 };
@@ -39,15 +41,14 @@ body {
     font-size: .92rem;
 } 
 
-.skills {    
-    width: 50%;
-    margin:4rem 0 0 1rem;
+.section {    
+    margin: 1rem auto;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns:1fr 1fr 1fr 80px 80px 80px;
-    grid-template-rows: 1fr 1fr 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr auto;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     color: white;   
@@ -55,25 +56,24 @@ body {
 
 
 .skills-grid__header { grid-area: 1 / 1 / 3 / 4; }
-.skills-grid__footer { grid-area: 3 / 1 / 4 / 7; }
-.skills-grid__skill-1 { grid-area: 1 / 4 / 2 / 5; }
-.skills-grid__skill-2 { grid-area: 2 / 4 / 3 / 5; }
-.skills-grid__skill-3 { grid-area: 1 / 5 / 2 / 6; }
-.skills-grid__skill-4 { grid-area: 2 / 5 / 3 / 6; }
-.skills-grid__skill-5 { grid-area: 1 / 6 / 2 / 7; }
-.skills-grid__skill-6 { grid-area: 2 / 6 / 3 / 7; }
-
+.skills-grid__footer  { grid-area: 5 / 1 / 6 / 4; }
+.skills-grid__skill-1 { grid-area: 3 / 1 / 4 / 2; }
+.skills-grid__skill-2 { grid-area: 3 / 2 / 4 / 3; }
+.skills-grid__skill-3 { grid-area: 3 / 3 / 4 / 4; }
+.skills-grid__skill-4 { grid-area: 4 / 1 / 5 / 2; }
+.skills-grid__skill-5 { grid-area: 4 / 2 / 5 / 3; }
+.skills-grid__skill-6 { grid-area: 4 / 3 / 5 / 4; }
 
 .skills__header {
     font-family: 'Shadows Into Light', cursive;
-    font-size: 6rem;
+    font-size: 3.1rem;
     text-transform: uppercase;
     padding: 20px;
     align-self: center;
     justify-self: center;
 }
 
-.skills__icon {
+.skills__skill {
     font-size: 1.8rem;
     align-self: center;
     justify-self: center;
@@ -82,9 +82,16 @@ body {
     transition: color .24s;
 }
 
-.skills__icon:hover {
+.skills__skill:hover,
+.skills__skill--hover {
+    color: var(--light-pear);
+}
+
+.skills_skill:active,
+.skills_skill--active {
     color: var(--pear);
 }
+
 .skills__name {
     font-size: .8rem;
     display: block;
@@ -92,4 +99,204 @@ body {
 
 .skills__footer {
     background-color: var(--white-smoke);
+    color: var(--charcoal);
+    font-weight: bold;
+    font-size: .9rem;
+    text-align: center;
+    padding: 2px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.work {
+    border: 4px solid var(--white-smoke);
+    border-top: none;
+    min-height: 40px;
+    margin: 0 20px;
+    position: relative;
+}
+
+.work::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dark-charcoal);
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+.work--show.work::before {
+    opacity: 0;
+}
+
+.work__list {    
+    color: var(--fluor-green);
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work__list__item { 
+    padding: 8px 4px;
+    font-size: .9rem;
+}
+.work__list__item__company {
+    text-transform: uppercase;
+    color: var(--dark-green);
+    font-weight: bold;
+    display: block;
+}
+/* .work__list__item__description {
+    flex: 1;
+}
+.work__list__item__skills {
+    flex: 1;
+} */
+.hide {
+    display: none;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact {
+    margin: 4px 0;
+    width: 100%;
+}
+
+.contact__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact__list__item {
+    flex:1;    
+    text-align: center;
+    padding: 4px;
+}
+
+.contact__list__item a {
+    color: var(--gunmetal);
+    padding-bottom: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color .245s, border .700s;
+    border-bottom:  2px solid transparent;
+}
+
+.contact__list__item a:hover {
+    color: var(--fluor-purple);
+    border-bottom: 2px solid var(--fluor-purple);
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info__header {    
+    display: flex;
+    padding: 10px 20px;
+    margin: 0 16px;
+    border: 1px solid var(--pear);
+    color: var(--light-pear);
+}
+
+.info__content {
+    align-self: center;
+    text-align: left;
+    padding: 6px;
+    margin: 10px;
+    width: 100%;
+}
+
+.command {
+    padding: 0 4px;
+    opacity: 0;
+}
+
+.command:nth-child(1) {
+   animation: commandline 1.6s ease-in-out 0s 1 normal forwards;
+}
+.command:nth-child(2) {
+    animation: commandline 1.6s ease-in-out .6s 1 normal forwards;
+}
+.command:nth-child(3) {
+    animation: commandline 1.6s ease-in-out 0s 1 normal forwards;
+}
+.command:nth-child(4) {
+    animation: commandline 1.6s ease-in-out 1.6s 1 normal forwards;
+}
+
+
+@keyframes commandline {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.text--bold {
+    font-weight: bold;
+}
+
+.info:not(.highlight) {
+   color: transparent;
+}
+
+.highlight {
+    color: var(--fluor-purple);
+    font-weight: bold;
+}
+
+.d--block {
+    display: block;
+}
+@media (min-width: 450px) {
+        
+    .skills-grid {
+        grid-template-columns:1fr 1fr 1fr 80px 80px 80px;
+        grid-template-rows: 1fr 1fr auto;
+    }
+
+    .skills-grid__header { grid-area: 1 / 1 / 3 / 4; }
+    .skills-grid__footer { grid-area: 3 / 1 / 4 / 7; }
+    .skills-grid__skill-1 { grid-area: 1 / 4 / 2 / 5; }
+    .skills-grid__skill-2 { grid-area: 2 / 4 / 3 / 5; }
+    .skills-grid__skill-3 { grid-area: 1 / 5 / 2 / 6; }
+    .skills-grid__skill-4 { grid-area: 2 / 5 / 3 / 6; }
+    .skills-grid__skill-5 { grid-area: 1 / 6 / 2 / 7; }
+    .skills-grid__skill-6 { grid-area: 2 / 6 / 3 / 7; }
+}
+
+@media (min-width: 560px) {
+    .skills__header {
+        font-size: 6rem;
+        transform: translateY(-10px) rotate(-10deg);
+    }
+}
+
+@media (min-width: 900px) {
+    .section {
+        margin: 4rem auto;
+    }
+    
+    .info__content {
+        flex: 1;
+        align-self: center;
+        text-align: right;
+        padding: 6px;
+        margin: 0;
+    }
 }

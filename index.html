@@ -1,46 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Larizza Tueros</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
     <div class="title-bar">Larizza Tueros</div>
+    <main class="container">
+        
+    <section class="contact">
+            <ul class="contact__list">
+                <li class="contact__list__item">
+                    <a href="https://github.com/larizzatg" target="_blank">github</a>
+                </li>
+                <li class="contact__list__item">
+                    <a href="https://twitter.com/larizza_tg" target="_blank">twitter</a>
+                </li>
+                <li class="contact__list__item">
+                    <a href="https://www.linkedin.com/in/larizza-tueros/" target="_blank">linkedin</a>
+                </li>
+                <li class="contact__list__item">
+                    <a href="https://stackoverflow.com/users/2826553/larizzatg?tab=profile" target="_blank">stackoverflow</a>
+                </li>
+                <li class="contact__list__item">
+                    <a href="assets/docs/larizza_tueros_resume.pdf" target="_blank" download>resume</a>
+                </li>
+            </ul>
+        </section>
 
-    <section class="skills">
-        <div class="skills-grid">
-            <div class="skills-grid__header skills__header">skills</div>
-            <div class="skills-grid__skill-1 skills__icon">
-                <i class="devicon-javascript-plain"></i>
-                <small class="skills__name">JavaScript</small>
+        <section class="section">
+           <div class="info">
+               <div class="info__header">
+                   <span class="command text--bold">$</span> 
+                   <span class="command">whoami</span>
+                   <span class="command">></span>
+                   <span class="command">ltueros</span>
+                </div>
+               <div class="info__content">
+                    <span class="highlight">frontend development</span> 
+                    <span class="highlight">help</span>
+                    <span class="highlight">identify</span>
+                    <span class="highlight">needs</span> 
+                    <span class="highlight">solve</span> 
+                    <span class="highlight">problems </span>
+               </div>
+           </div> 
+        </section>
+        <section class="section">
+            <div class="skills-grid">
+                <div class="skills-grid__header skills__header">skills</div>
+                <div class="skills-grid__skill-1 skills__skill skill-js" data-skill="javascript">
+                    <i class="devicon-javascript-plain"></i>
+                    <small class="skills__name">JavaScript</small>
+                </div>
+                <div class="skills-grid__skill-2 skills__skill skill-js" data-skill="vuejs">
+                    <i class="devicon-vuejs-plain"></i>
+                    <small class="skills__name">VueJS</small>
+                </div>
+                <div class="skills-grid__skill-3 skills__skill skill-js" data-skill="html5">
+                    <i class="devicon-html5-plain"></i>
+                    <small class="skills__name">HTML5</small>
+                </div>
+                <div class="skills-grid__skill-4 skills__skill skill-js" data-skill="css3">
+                    <i class="devicon-css3-plain"></i>
+                    <small class="skills__name">CSS3</small>
+                </div>
+                <div class="skills-grid__skill-5 skills__skill skill-js" data-skill="csharp">
+                    <i class="devicon-csharp-plain"></i>
+                    <small class="skills__name">C#</small>
+                </div>
+                <div class="skills-grid__skill-6 skills__skill skill-js" data-skill="php">
+                    <i class="devicon-php-plain"></i>
+                    <small class="skills__name">PHP</small>
+                </div>
+                <div class="skills-grid__footer skills__footer">
+                   Most of my work is for private companies <small class="d--block"> select a skill to know more about it</small>
+                </div>
             </div>
-            <div class="skills-grid__skill-2 skills__icon">
-                <i class="devicon-vuejs-plain"></i>
-                <small class="skills__name">VueJS</small>
+            <div class="work work-js">
+                <ul class="work__list work__list-js">
+                </ul>
             </div>
-            <div class="skills-grid__skill-3 skills__icon">
-                <i class="devicon-html5-plain"></i>
-                <small class="skills__name">HTML5</small>
-            </div>
-            <div class="skills-grid__skill-4 skills__icon">
-                <i class="devicon-css3-plain"></i>
-                <small class="skills__name">CSS3</small>
-            </div>
-            <div class="skills-grid__skill-5 skills__icon">
-                <i class="devicon-csharp-plain"></i>
-                <small class="skills__name">C#</small>
-            </div>
-            <div class="skills-grid__skill-6 skills__icon">
-                <i class="devicon-php-plain"></i>
-                <small class="skills__name">PHP</small>
-            </div>
-            <div class="skills-grid__footer skills__footer"></div>
-        </div>
-    </section>
+        </section>
+    </main>
+    <script src="assets/app.js"></script>
 </body>
+
 </html>
